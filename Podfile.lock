@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - HandyJSON (5.0.2)
+
+DEPENDENCIES:
+  - Charts
+  - HandyJSON
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - HandyJSON
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+
+PODFILE CHECKSUM: dcb5a2b1a52f22565a14e230f7241d0cb1a2ac70
+
+COCOAPODS: 1.9.1
