@@ -74,13 +74,13 @@ class ViewController: UIViewController {
     }
     
     func changeBarData(_ json: String) {
-        let json = "{\"category\":[\"20-21\",\"21-22\",\"22-23\",\"23-24\",\"00-01\",\"01-02\",\"02-03\",\"03-04\",\"04-05\",\"05-06\",\"06-07\",\"07-08\"],\"deep\":[5.0, 2.0, 3.0, 1.0, 5.0, 5.0, 2.0, 5.0, 5.0, 5.0, 10.0, 20.0],\"dream\":[10.0, 22.0, 32.0, 10.0, 30.0, 25.0, 30.0, 10.0, 10.0, 20.0, 10.0, 20.0],\"light\":[10.0, 3.0, 20.0, 10.0, 4.0, 20.0, 30.0, 13.0, 10.0, 20.0, 30.0, 40.0],\"timeInfo\":[\"20:00-21:00\",\"21:00-22:00\",\"22:00-23:00\",\"23:00-24:00\",\"00:00-01:00\",\"01:00-02:00\",\"02:00-03:00\",\"03:00-04:00\",\"04:00-05:00\",\"05:00-06:00\",\"06:00-07:00\",\"07:00-08:00\"]}"
+        let json = "{\"category\":[\"20-21\",\"21-22\",\"22-23\",\"23-24\",\"00-01\",\"01-02\",\"02-03\",\"03-04\",\"04-05\",\"05-06\",\"06-07\",\"07-08\"],\"deep\":[5.0, 2.0, 3.0, 1.0, 5.0, 5.0, 2.0, 5.0, 5.0, 5.0, 10.0, 20.0],\"dream\":[10.0, 22.0, 32.0, 10.0, 30.0, 25.0, 30.0, 10.0, 10.0, 20.0, 10.0, 20.0],\"light\":[10.0, 22.0, 32.0, 10.0, 30.0, 25.0, 30.0, 10.0, 10.0, 20.0, 10.0, 20.0],\"timeInfo\":[\"20:00-21:00\",\"21:00-22:00\",\"22:00-23:00\",\"23:00-24:00\",\"00:00-01:00\",\"01:00-02:00\",\"02:00-03:00\",\"03:00-04:00\",\"04:00-05:00\",\"05:00-06:00\",\"06:00-07:00\",\"07:00-08:00\"]}"
         
         guard let sleep = SleepBarData.deserialize(from: json) else { return  }
 
-        let groupSpace: Double = 0.07
-        let barSpace: Double = 0.01
-        let barWidth: Double = 0.3
+        let groupSpace: Double = 0.1
+        let barSpace: Double = 0.1
+        let barWidth: Double = 0.2
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: sleep.category)
         barChart.xAxis.labelCount = sleep.category.count
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
         
         let set1 = BarChartDataSet(entries: values1, label: "深睡")
         set1.setColor(NSUIColor.yellow)
-        let set2 = BarChartDataSet(entries: values3, label: "浅睡")
+        let set2 = BarChartDataSet(entries: values2, label: "浅睡")
         set2.setColor(NSUIColor.red)
         let set3 = BarChartDataSet(entries: values3, label: "清醒")
         set3.setColor(NSUIColor.blue)
